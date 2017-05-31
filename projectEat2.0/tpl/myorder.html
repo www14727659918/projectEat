@@ -1,0 +1,27 @@
+<div ng-include="'tpl/include/header.html'"></div>
+
+<ion-content class="has-header has-footer">
+    <h1 class="title text-center">我的订单</h1>
+    <div class="row text-center">
+        <div class="col col-20">编号</div>
+        <div class="col col-33">菜品</div>
+        <div class="col">下单时间</div>
+        <div class="col col-20">联系人</div>
+    </div>
+        <div ng-repeat="list in useridList" class="row text-center">
+            <div class="col col-20">{{list.oid}}</div>
+            <div class="col col-33">
+                <a  ui-sref="detail({did:list.did})">
+                    <img ng-src="img/{{list.img_sm}}"
+                         class="img-responsive" alt=""/>
+                </a>
+            </div>
+            <div class="col">{{list.order_time }}</div>
+            <div class="col col-20">{{list.user_name}}</div>
+
+        </div>
+
+
+</ion-content>
+
+<div ng-include="'tpl/include/footer.html'"></div>

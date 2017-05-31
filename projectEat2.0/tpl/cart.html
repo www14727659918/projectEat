@@ -1,0 +1,53 @@
+
+
+<ion-header-bar  align-title="center">
+        <h1 class="title">我的购物车</h1>
+    <button class="button button-clear button-dark" ng-click="isChange()">
+        {{Msg}}
+    </button>
+</ion-header-bar>
+
+<ion-content class="has-header has-footer" >
+    <div class="row   card">
+        <div class="col">
+            菜品
+        </div>
+        <div class="col">
+            内容
+        </div>
+
+    </div>
+    <!--<h1 class="text-center">{{cart_ts}}</h1>-->
+        <ion-list ng-repeat=" item in list">
+            <ion-item class="card">
+                <div class="row">
+                    <div class="col" ui-sref="detail({did:item.did})">
+                        <img ng-src="img/{{item.img_sm}}">
+                    </div>
+                    <div class="col" ng-if="isOpen">
+                        <h2>{{item.name}}</h2>
+                        <p>数量：x{{item.dishCount}}</p>
+                        <p style="color: red">{{(item.price * item.dishCount) | currency:"¥"}}</p>
+
+
+                        <div class="col col-10  col-bottom col-offset-80 "  >
+                            <button ng-click="minus($index)" >-</button>{{item.dishCount}}<button ng-click="addBtn($index)">+</button>
+                        </div>
+                    </div>
+                </div>
+                <ion-option-button ng-click="deleteBtn($index,item.ctid)" class="button-assertive">删除</ion-option-button>
+            </ion-item>
+        </ion-list>
+    <div class="list">
+
+        <div class="item item-button-right">
+            <h2 >总计：¥{{sumAll()}}</h2>
+            <button ng-click="to('order')" class="button button-assertive">
+               立即下单
+            </button>
+        </div>
+
+    </div>
+
+</ion-content>
+<div ng-include="'tpl/include/footer.html'"></div>

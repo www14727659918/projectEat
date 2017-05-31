@@ -1,0 +1,34 @@
+
+    <div ng-include="'tpl/include/header.html'"></div>
+    <ion-content class="has-header has-footer">
+        <div ng-hide="result" class="list  list-inset card" >
+            <label class="item item-input item-floating-label">
+                <span class="input-label">联系人：</span>
+                <input type="text" placeholder="请输入您姓名" ng-model="order.user_name">
+            </label>
+            <label class="item item-input  item-floating-label">
+                <span class="input-label">联系电话:</span>
+                <input type="number" id="phone"  ng-model="order.phone" placeholder="请输入您联系方式"/>
+            </label>
+
+            <label class="item item-input item-floating-label">
+                 <label class="input-label">送餐地址</label>
+                 <textarea name="address"  id="address" ng-model="order.addr" placeholder="输入送餐地址"></textarea>
+            </label>
+            <label class="item item-input">
+                <span class="input-label">选择性别：</span>
+            </label>
+            <ion-list>
+                <ion-radio value="1" ng-model="order.sex">男</ion-radio>
+                <ion-radio value="2" ng-model="order.sex">女</ion-radio>
+            </ion-list>
+            <button ng-click="submitOrder()" class="button button-block button-balanced" type="submit" >提交订单</button>
+            <!--<button ng-click="hide()" class="button button-block button-calm">返回</button>-->
+        </div>
+        <div class="card" ng-show="result">
+            <div class="item">
+                <p >订单NO:{{result}},您可以在中心查看订单状态</p>
+            </div>
+        </div>
+    </ion-content>
+<div ng-include="'tpl/include/footer.html'"></div>

@@ -1,0 +1,21 @@
+<ion-modal-view>
+    <ion-content>
+        <ion-list>
+            <ion-item>
+                <div class="list list-inset">
+                    <div class="item">
+                        账户名称：{{list.uname}}
+                    </div>
+                    <div class="item">
+                        手机号：{{list.phone}}
+                    </div>
+                    <button
+                            ng-click="hideLogin()"
+                            class="button button-balanced button-block">
+                        关闭
+                    </button>
+                </div>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-modal-view>

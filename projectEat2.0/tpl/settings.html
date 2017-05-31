@@ -1,0 +1,21 @@
+<!--页头-->
+<div ng-include="'tpl/include/header.html'"></div>
+<ion-content class="has-header has-footer">
+
+    <div class="list list-inset card">
+        <div
+               ng-click="showLogin()"
+                class="item">账号</div>
+        <div
+               ng-click="show()"
+                class="item">关于</div>
+        <div
+                ng-click="closeout()"
+                class="item">退出登录</div>
+    </div>
+
+</ion-content>
+
+
+<!--页尾-->
+<div ng-include="'tpl/include/footer.html'"></div>

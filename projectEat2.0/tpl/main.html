@@ -1,0 +1,47 @@
+
+<!--页头-->
+<div ng-include="'tpl/include/header.html'"></div>
+<!--列表-->
+
+<ion-content has-bouncing="true" class="has-header has-footer">
+    <!--搜索框-->
+    <div class="list list-inset">
+        <input type="text"  placeholder="搜索菜品名称和原料" ng-model="inputTxt.kw">
+        <span class="icon ion-search placeholder-icon"></span>
+    </div>
+    <div class="list list-inset">
+        <a ui-sref="detail({did:dish.did})" class="item item-text-wrap item-thumbnail-left" ng-repeat=" dish in dishList track by $index">
+                    <img ng-src="img/{{dish.img_sm}}" alt=""/>
+                    <h2 >{{dish.name}}</h2>
+                    <p>{{dish.material}}</p>
+                    <p style="color: red">¥{{dish.price}}</p>
+        </a>
+
+
+        <ion-infinite-scroll
+                immediate-check="false"
+                ng-if="hasMore"
+                on-infinite="getMore()">
+
+        </ion-infinite-scroll>
+        <div class="card" ng-hide="hasMore">
+            <div class="item">
+                <p  class="text-center">没有更多数据</p>
+            </div>
+        </div>
+
+        <!--<button class="button button-block button-balanced" ng-click="getMore()" ng-show="hasMore" >-->
+                <!--加载更多-->
+            <!--</button>-->
+        <!--<div class="card" ng-hide="hasMore">-->
+            <!--<div class="item">-->
+                <!--<p  class="text-center">没有更多数据</p>-->
+            <!--</div>-->
+        <!--</div>-->
+
+    </div>
+</ion-content>
+<!--页尾-->
+<div ng-include="'tpl/include/footer.html'"></div>
+
+

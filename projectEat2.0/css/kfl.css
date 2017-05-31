@@ -1,0 +1,62 @@
+/*body{*/
+    /*margin:80px 0 80px 0;*/
+/*}*/
+/*.align-center{*/
+    /*position: fixed;*/
+    /*top: 50%;*/
+    /*left: 50%;*/
+    /*transform: translate(-50%,-50%);*/
+    /*text-align: center;*/
+/*}*/
+/*/!*.glyphicon-search{*!/*/
+     /*/!*left: -30px;*!/*/
+     /*/!*top: 3px;*!/*/
+ /*/!*}*!/*/
+/*.navbar-footer-menu{*/
+    /*list-style: none;*/
+    /*margin: 0;*/
+    /*padding: 0;*/
+    /*text-align: center;*/
+    /*line-height: 50px;*/
+
+/*}*/
+/*.navbar-footer-menu li{*/
+    /*display: inline-block;*/
+    /*width: 30%;*/
+/*}*/
+.welcome_img{
+    max-width: 100%;
+}
+.welcome_title{
+    position: absolute;
+    bottom:15%;
+    left:25%;
+    color: #FF6E01;
+}
+.tabs-top>.tabs, .tabs.tabs-top{
+    top:auto;
+}
+.slider-pager{
+    bottom:80px;
+}
+.slider-pager .slider-pager-page{
+    color: #f00;
+}
+.myForm{
+    margin-top:40%;
+}
+.item .vcode{
+    position: absolute;
+    top:18px;
+    right:18px;
+}
+.ion-search{
+    position: absolute;
+    top:18px;
+    right:18px;
+}
+.img-responsive{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}

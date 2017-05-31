@@ -1,0 +1,25 @@
+
+<!--<ion-modal-view>-->
+<!--<div ng-include="'tpl/include/header.html'"></div>-->
+    <ion-content>
+        <ion-list>
+            <ion-item>
+                <form name="myForm"  class=" list" >
+                    <label class="item item-input  item-floating-label">
+                        <span class="input-label">用户名称:</span>
+                        <input type="text" name="userName"  ng-model="userName" placeholder="请输入您的用户名" required/>
+                    </label>
+                    <label class="item item-input  item-floating-label">
+                        <span class="input-label">用户密码:</span>
+                        <input type="password" name="userPwd"  ng-model="userPwd" placeholder="请输入您的密码名" required/>
+                    </label>
+                    <button  ng-disabled="myForm.$invalid"  ng-click="submitInfo()" type="submit" class="button button-block button-assertive">点击登陆</button>
+                    <button ng-click="register()"  class="button button-clear button-block button-positive ">
+                        无账号请注册
+                    </button>
+                </form>
+        </ion-list>
+        </ion-item>
+    </ion-content>
+<div ng-include="'tpl/include/footer.html'"></div>
+<!--</ion-modal-view>-->
